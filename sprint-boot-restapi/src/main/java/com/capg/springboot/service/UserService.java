@@ -1,0 +1,48 @@
+package com.capg.springboot.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.capg.springboot.model.User;
+@Service
+
+public class UserService {
+	
+	Map<Integer,User> users = new HashMap<>();
+	
+	public void addSomeUsers() {
+		User user1=new User(101,"Sakshi","sakshikapurkar@gmail.com",9640907428L);
+		User user2=new User(102,"Shivani","shivani kapurkar@gmail.com",9640907428L);
+		User user3=new User(103,"Sakku_Bai","sakku_baikapurkar@gmail.com",9640907428L);
+		
+		users.put(user1.getUserId(), user1);
+		users.put(user2.getUserId(), user2);
+		users.put(user3.getUserId(), user3);
+	}
+	
+	public User getUser(int userId){
+		return users.get(userId);
+	}
+	
+	public List<User> getUsers(){
+		List<User> allUser=new ArrayList<User>();
+		users.forEach((k,v)->allUser.add(v));
+		return allUser;
+	}
+	
+
+	public User addUser(User user) {
+		users.put(user.getUserId(),user);
+		return user;
+	}
+	
+	public boolean deleteUser(int userId) {
+		 users.remove(userId);
+		 return !users.containsKey(userId);
+	}
+	
+}
