@@ -1,0 +1,5 @@
+package com.capg.springboot.model;
+
+public class User {
+
+}
