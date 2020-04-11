@@ -46,6 +46,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\Capgemini Files\capgemini-bvrit-master\capgemini-bvrit-master\capg-movie-rating"/>
+			<item value="E:\Capgemini Files\capgemini-bvrit-master\capgemini-bvrit-master\capg-movie-info"/>
+			<item value="E:\Capgemini Files\capgemini-bvrit-master\capgemini-bvrit-master\capg-movie-catelog"/>
+			<item value="E:\Capgemini Files\capgemini-bvrit-master\demo-spring-boot-simple"/>
+			<item value="C:\Users\home\Downloads\capgemini-bvrit-master\spring-boot-rest-api"/>
 			<item value="E:\Capgemini Files\capgemini-bvrit-master\jpa-hibernate-demo"/>
 			<item value="E:\Capgemini Files\capgemini-bvrit-master\jpa-student-demo"/>
 		</list>
