@@ -1,7 +1,8 @@
 package com.capg.labook;
 
 import org.springframework.beans.factory.annotation.Value;
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component("emp")
@@ -23,16 +24,7 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Employee(int empId, String empName, double empSal, int empAge) {
-		super();
-		this.empId = empId;
-		this.empName = empName;
-		this.empSal = empSal;
-		//this.empBU = empBU;
-		this.empAge = empAge;
-	}
-
-
+	
 	public int getEmpId() {
 		return empId;
 	}
@@ -63,6 +55,16 @@ public class Employee {
 	}
 
 
+	public SBU getEmpBU() {
+		return empBU;
+	}
+
+
+	public void setEmpBU(SBU empBU) {
+		this.empBU = empBU;
+	}
+
+
 	public int getEmpAge() {
 		return empAge;
 	}
@@ -72,12 +74,28 @@ public class Employee {
 		this.empAge = empAge;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", empSal=" + empSal + ", empAge=" + empAge + "]";
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empSal=" + empSal + ",\n empBU=" + getSbuDetails()
+				+ ", empAge=" + empAge + "]";
 	}
 
+
+	public Employee(int empId, String empName, double empSal, SBU empBU, int empAge) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.empSal = empSal;
+		this.empBU = empBU;
+		this.empAge = empAge;
+	}
+
+
 	public SBU getSbuDetails() {
+		ApplicationContext context= new AnnotationConfigApplicationContext(EmployeeConfiguration.class);
+		empBU=(SBU)context.getBean("sbu");
 		return empBU;
 		
 		

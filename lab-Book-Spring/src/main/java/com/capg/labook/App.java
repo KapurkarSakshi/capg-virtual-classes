@@ -14,10 +14,10 @@ public class App
       ApplicationContext context= new AnnotationConfigApplicationContext(EmployeeConfiguration.class);
         
         Employee e=(Employee)context.getBean("emp");
-        SBU sbu=e.getSbuDetails();
+ //       SBU sbu=e.getSbuDetails();
 //        SBU sbu=(SBU)context.getBean("sbu");
         System.out.println("Employee Details.."+"\n ------------------------");
         System.out.println(e);
-        System.out.println("SBU DEtails = "+sbu);
+      //  System.out.println("\nSBU DEtails = "+sbu);
     }
 }
